@@ -10,6 +10,7 @@ filenames = glob.glob("*.xml")
 counter = 2
 outputfile = file
 
+print 'Combining XML files...'
 for fname in filenames:  	
 	in_size = (os.stat(fname).st_size / 1000000)
 	try:
