@@ -26,20 +26,20 @@ Python scripts must be executed in the following order:
 ### Modifications to scripts
 
 #### s3_csv_split.py
-* **Change the file name:**
+* Change the file name:
 	`with open('m268_copy.csv', 'r') as log :`
 
-* **Change the number of rows to match the number of columns on the original csv:**
+* Change the number of rows to match the number of columns on the original csv:
 	`writelog.writerow( (row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7] ) )`
 	
 #### reformat_partner_xml.py
-* **Change the series NAID:**
+* Change the series NAID:
 	`series = 586957`
 
-* **Change the microfilm publication number:**
+* Change the microfilm publication number:
 	`pub = 'M268'`
 
-* **Ensure the xml tags for r.replace match the metadata:**
+* Ensure the xml tags for r.replace match the metadata:
 	```
 	try:
 		with open('metadata/' + file + '_metadata.xml', 'r') as y :
@@ -63,7 +63,7 @@ Python scripts must be executed in the following order:
 	print str(datetime.datetime.now().time()) + ': ' + Publication_Number, Publication_Title, 'Roll ' + str(roll)
 	```
 
-* **Ensure the data values match the metadata:**
+* Ensure the data values match the metadata:
 	```
 	try:
 		for page in root.findall('page'):
@@ -93,7 +93,7 @@ Python scripts must be executed in the following order:
 					military_unit = page.find('military-unit').text
 	```
 
-* **Ensure the csv row numbers are accurate:**
+* Ensure the csv row numbers are accurate:
 	```
 	for row in readfile:
 		try:
@@ -106,8 +106,12 @@ Python scripts must be executed in the following order:
 			pass
 	```
 
-* **Modify the title string as appropriate:**
+* Modify the title string as appropriate:
 	`title = ('[Tennessee] ' + surname + ', ' + givenname + ' - Age ' + age + ', Year: ' + year + ' - ' + military_unit).encode('utf-8')`
+	
+#### combine_xml.py
+* Modify the starting filename:
+	`file = 'm384-import-1.xml'`
 
 ## Other files
 The following files must be in the working directory as they exist here:
