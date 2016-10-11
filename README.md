@@ -1,10 +1,7 @@
 # partner-data-transform
 This repo contains the files necessary to transform the data from partner digitization projects into a format compliant with the data scheme to import to the Description and Authority Service (DAS) for inclusion in the [National Archives Catalog](https://catalog.archives.gov).
 
-Download this repo as it exists for a working directory: 
-* Partner XML files will need to be placed in the /metadata folder
-* S3 Manifester CSV file will need to be placed in the /objects folder
-* Python scripts will need to be modified for each new instance
+[Download this repo](https://github.com/usnationalarchives/partner-data-transform/archive/master.zip) as it exists for a working directory.
 
 ## /metadata
 Partner XML metadata for each microfilm publicaton must go in the metadata folder. Samples for a publication can be found in the [metadata folder here](https://github.com/usnationalarchives/partner-data-transform/tree/master/metadata).
@@ -22,7 +19,7 @@ Python scripts must be run in the following order:
 2. [reformat_partner_xml.py](https://github.com/usnationalarchives/partner-data-transform/blob/master/reformat_partner_xml.py)
   * This script reformats the partner xml into a DAS xml format, then marries the xml with the digital object filepaths.
 3. [combine_xml.py](https://github.com/usnationalarchives/partner-data-transform/blob/master/combine_xml.py)
-  * This script combines multiple xml files for each microfilm roll into one for bulk import
+  * This script combines multiple xml files for each microfilm roll into one for bulk import.
 
 *All scripts in this repo are written in [Python 2.7](https://www.python.org/download/releases/2.7/).*
 
