@@ -21,7 +21,7 @@ Python scripts must be executed in the following order:
 2. [reformat_partner_xml.py](https://github.com/usnationalarchives/partner-data-transform/blob/master/reformat_partner_xml.py)
   * This script reformats the partner xml into a Description and Authority Service (DAS) xml format, then marries the xml with the digital object filepaths.
 3. [combine_xml.py](https://github.com/usnationalarchives/partner-data-transform/blob/master/combine_xml.py)
-  * This script combines the newly-generated XML files from reformat_partner_xml.py into files of 75 KB or less for import into DAS.
+  * This script combines the newly-generated XML files from reformat_partner_xml.py into files of 75 MB or less for import into DAS.
   
 ### Modifications to scripts
 
