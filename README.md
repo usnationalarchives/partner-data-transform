@@ -19,9 +19,9 @@ Python scripts must be executed in the following order:
 1. [s3_csv_split.py](https://github.com/usnationalarchives/partner-data-transform/blob/master/s3_csv_split.py)
   * This script takes the CSV file with all the digital image filepaths from the Amazon S3 cloud and breaks them out per microfilm roll.
 2. [reformat_partner_xml.py](https://github.com/usnationalarchives/partner-data-transform/blob/master/reformat_partner_xml.py)
-  * This script reformats the partner xml into a DAS xml format, then marries the xml with the digital object filepaths.
+  * This script reformats the partner xml into a Description and Authority Service (DAS) xml format, then marries the xml with the digital object filepaths.
 3. [combine_xml.py](https://github.com/usnationalarchives/partner-data-transform/blob/master/combine_xml.py)
-  * This script combines multiple xml files for each microfilm roll into one for bulk import.
+  * This script combines the newly-generated XML files from reformat_partner_xml.py into files of 75 KB or less for import into DAS.
   
 ### Modifications to scripts
 
