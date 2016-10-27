@@ -17,3 +17,4 @@ with open('objects/opaexport-conv_m384_1473437803.csv', 'r') as log :
 				writelog.writerow( (row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7] ) )
 			except IndexError:
 				pass
+print 'Complete.'
