@@ -1,6 +1,6 @@
 ## This script cobmined the newly-generated XML files from reformat_partner_xml.py into files of 75 KB or less for import into the Description and Authority Service (DAS).
 ## NOTES: The following data must be modified for each use:
-##	* Line 8 - The XML file name for the combined files
+##	* Line 7 - The XML file name for the combined files
 
 import os, re, glob
 
