@@ -16,17 +16,29 @@ Python scripts must be modified for each new instance. Notes for where to modify
 
 Python scripts must be executed in the following order:
 
-1. [s3_csv_split.py](https://github.com/usnationalarchives/partner-data-transform/blob/master/s3_csv_split.py)
+1. [s3_file_list.py](https://github.com/usnationalarchives/partner-data-transform/blob/master/s3_file_list.py)
+  * This script generates a CSV file listing all the digital image filepaths for the specified directory with other relevant data to be used in the data transformation. For the script to work, you must install the [boto3](https://boto3.readthedocs.io/en/latest/) Python module and the [AWS Command Line Interface](https://aws.amazon.com/cli/) with the commands `pip install boto3` and `pip install awscli`. Once installed, configure your AWS credentials with the command `aws configure`.
+2. [s3_csv_split.py](https://github.com/usnationalarchives/partner-data-transform/blob/master/s3_csv_split.py)
   * This script takes the CSV file with all the digital image filepaths from the Amazon S3 cloud and breaks them out per microfilm roll.
-2. [reformat_partner_xml.py](https://github.com/usnationalarchives/partner-data-transform/blob/master/reformat_partner_xml.py)
+3. [reformat_partner_xml.py](https://github.com/usnationalarchives/partner-data-transform/blob/master/reformat_partner_xml.py)
   * This script reformats the partner xml into a Description and Authority Service (DAS) xml format, then marries the xml with the digital object filepaths.
-3. [combine_xml.py](https://github.com/usnationalarchives/partner-data-transform/blob/master/combine_xml.py)
+4. [combine_xml.py](https://github.com/usnationalarchives/partner-data-transform/blob/master/combine_xml.py)
   * This script combines the newly-generated XML files from reformat_partner_xml.py into files of 75 MB or less for import into DAS.
   
 ### Modifications to scripts
 
+### s3_file_list.py
+* Change the S3 bucket name:
+	`bucket = s3.Bucket(name='NARAprodstorage')`
+
+* Change the target file name:
+	`with open('m1064_objects.csv', 'wt') as log :`
+
+* Change the S3 directory:
+	`for obj in bucket.objects.filter(Prefix='lz/microfilm-publications/M1064_LettrsRecdCommBranch1863-1870'):`
+
 #### s3_csv_split.py
-* Change the file name:
+* Change the target file name:
 	`with open('m268_copy.csv', 'r') as log :`
 
 * Change the number of rows to match the number of columns on the original csv:
