@@ -125,7 +125,7 @@ while x > 0:
 
 <onlineResourceArray><onlineResource><termName>https://www.fold3.com/image/""" + id + """</termName><description>Fold3</description><note>This file was scanned as part of a collaboration effort between Fold3 and the National Archives.</note></onlineResource></onlineResourceArray>
 
-<variantControlNumberArray><variantControlNumber><number>Fold3 2016</number><type><termName>Search Identifier</termName></type></variantControlNumber></variantControlNumberArray>
+<variantControlNumberArray><variantControlNumber><number>Fold3 2018</number><type><termName>Search Identifier</termName></type></variantControlNumber></variantControlNumberArray>
 
 <microformPublicationArray><microformPublication><note>The start of this file can be found on Roll """ + str(roll) + """.</note><publication><termName>M384 - Compiled Service Records of Volunteer Union Soldiers Who Served in Organizations From the State of Maryland.</termName></publication></microformPublication></microformPublicationArray>
 
