@@ -99,11 +99,11 @@ while x > 0:
 	
 				for row in readfile:
 					try:
-						if new_file_name == row[7]:
-							if file == row[4]:
+						if new_file_name == row[3]:
+							if file == row[2]:
 								file_size = str(row[1])
 								file_path = row[0]
-								label_flag = row[7]
+								label_flag = row[3]
 					except IndexError:
 						pass
 
@@ -155,7 +155,7 @@ while x > 0:
 				digital_objects = """<digitalObject><objectType><termName>Image (JPG)</termName></objectType><labelFlag>""" + label_flag + """</labelFlag>
 <objectDesignator>Fold3 File #""" + id + """</objectDesignator>
 <objectDescription>Image provided by Fold3.</objectDescription>
-<accessFilename>https://opaexport-conv.s3.amazonaws.com/""" + file_path + """</accessFilename><accessFileSize>""" + str(file_size) + """</accessFileSize>
+<accessFilename>https://NARAprodstorage.s3.amazonaws.com/""" + file_path + """</accessFilename><accessFileSize>""" + str(file_size) + """</accessFileSize>
 <thumbnailFilename>http://media.nara.gov/dc-metro/jpg_t.jpg</thumbnailFilename><thumbnailFileSize>1234</thumbnailFileSize></digitalObject>
 
 """
