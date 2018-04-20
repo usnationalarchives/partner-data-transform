@@ -21,6 +21,9 @@ for fname in filenames:
 		file = re.split('\.', outputfile)[0] + '_' + str(counter) + '.xml'
 		counter = counter + 1
 	with open(file, 'a') as outfile:   
+		outfile.write('<import xmlns="http://ui.das.nara.gov/"><fileUnitArray>')
 		with open(fname) as infile:
 			for line in infile:
 				outfile.write(line)
+	with open(file, 'a') as outfile:
+		outfile.write('</fileUnitArray></import>')
