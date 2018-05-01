@@ -155,7 +155,7 @@ while x > 0:
 				digital_objects = """<digitalObject><objectType><termName>Image (JPG)</termName></objectType><labelFlag>""" + label_flag + """</labelFlag>
 <objectDesignator>Fold3 File #""" + id + """</objectDesignator>
 <objectDescription>Image provided by Fold3.</objectDescription>
-<accessFilename>https://NARAprodstorage.s3.amazonaws.com/""" + file_path + """</accessFilename><accessFileSize>""" + str(file_size) + """</accessFileSize>
+<accessFilename>https://s3.amazonaws.com/NARAprodstorage/""" + file_path + """</accessFilename><accessFileSize>""" + str(file_size) + """</accessFileSize>
 <thumbnailFilename>http://media.nara.gov/dc-metro/jpg_t.jpg</thumbnailFilename><thumbnailFileSize>1234</thumbnailFileSize></digitalObject>
 
 """
