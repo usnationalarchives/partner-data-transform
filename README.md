@@ -119,6 +119,7 @@ Python scripts must be executed in the following order:
 	```
 
 * Modify the title string as appropriate:
+	
 	`title = ('[Maryland] ' + surname + ', ' + givenname + ' - Age ' + age + ', Year: ' + year + ' - ' + military_unit).encode('utf-8')`
 	
 * Update the microfilm publication information:
