@@ -32,14 +32,14 @@ Python scripts must be executed in the following order:
 	`bucket = s3.Bucket(name='NARAprodstorage')`
 
 * Change the target file name:
-	`with open('m1064_objects.csv', 'wt') as log :`
+	`with open('m384_objects.csv', 'wt') as log :`
 
 * Change the S3 directory:
 	`for obj in bucket.objects.filter(Prefix='lz/microfilm-publications/M1064_LettrsRecdCommBranch1863-1870'):`
 
 #### s3_csv_split.py
 * Change the target file name:
-	`with open('m268_copy.csv', 'r') as log :`
+	`with open('m384_copy.csv', 'r') as log :`
 
 * Change the number of rows to match the number of columns on the original csv:
 	`writelog.writerow( (row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7] ) )`
@@ -49,7 +49,7 @@ Python scripts must be executed in the following order:
 	`series = 586957`
 
 * Change the microfilm publication number:
-	`pub = 'M268'`
+	`pub = 'M384'`
 
 * Ensure the xml tags for r.replace match the metadata:
 	```
@@ -119,7 +119,10 @@ Python scripts must be executed in the following order:
 	```
 
 * Modify the title string as appropriate:
-	`title = ('[Tennessee] ' + surname + ', ' + givenname + ' - Age ' + age + ', Year: ' + year + ' - ' + military_unit).encode('utf-8')`
+	`title = ('[Maryland] ' + surname + ', ' + givenname + ' - Age ' + age + ', Year: ' + year + ' - ' + military_unit).encode('utf-8')`
+
+* Update the microfilm publication information:
+	`<microformPublicationArray><microformPublication><note>The start of this file can be found on Roll """ + str(roll) + """.</note><publication><termName>M384 - Compiled Service Records of Volunteer Union Soldiers Who Served in Organizations From the State of Maryland.</termName></publication></microformPublication></microformPublicationArray>`
 	
 #### combine_xml.py
 * Modify the starting filename:
