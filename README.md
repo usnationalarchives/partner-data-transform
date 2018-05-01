@@ -119,10 +119,14 @@ Python scripts must be executed in the following order:
 	```
 
 * Modify the title string as appropriate:
-	`title = ('[Maryland] ' + surname + ', ' + givenname + ' - Age ' + age + ', Year: ' + year + ' - ' + military_unit).encode('utf-8')`
-
+	```
+	title = ('[Maryland] ' + surname + ', ' + givenname + ' - Age ' + age + ', Year: ' + year + ' - ' + military_unit).encode('utf-8')
+	```
+	
 * Update the microfilm publication information:
-	`<microformPublicationArray><microformPublication><note>The start of this file can be found on Roll """ + str(roll) + """.</note><publication><termName>M384 - Compiled Service Records of Volunteer Union Soldiers Who Served in Organizations From the State of Maryland.</termName></publication></microformPublication></microformPublicationArray>`
+	```
+	<microformPublicationArray><microformPublication><note>The start of this file can be found on Roll """ + str(roll) + """.</note><publication><termName>M384 - Compiled Service Records of Volunteer Union Soldiers Who Served in Organizations From the State of Maryland.</termName></publication></microformPublication></microformPublicationArray>
+	```
 	
 #### combine_xml.py
 * Modify the starting filename:
