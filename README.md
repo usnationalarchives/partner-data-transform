@@ -27,7 +27,7 @@ Python scripts must be executed in the following order:
   
 ### Modifications to scripts
 
-### s3_file_list.py
+#### s3_file_list.py
 * Change the S3 bucket name:
 	`bucket = s3.Bucket(name='NARAprodstorage')`
 
