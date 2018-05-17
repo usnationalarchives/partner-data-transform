@@ -5,7 +5,7 @@ s3 = boto3.resource('s3')
 bucket = s3.Bucket(name='BUCKET')
 
 # Create the new CSV. Change "output.csv" to set the name of the output CSV file. Set the prefix to use in searching with the "Prefix=" parameter, (currently set to empty).
-with open('output.csv', 'wt') as log :
+with open('output.csv', 'wb') as log :
 	print datetime.datetime.now().time()
 	writelog = csv.writer(log)
 	for obj in bucket.objects.filter(Prefix=''):
